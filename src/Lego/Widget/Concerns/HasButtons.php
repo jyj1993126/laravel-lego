@@ -10,7 +10,7 @@ trait HasButtons
      * 按钮位置列表，eg：[left-bottom, right-bottom, left-top, ...]
      * @return array
      */
-    abstract public function buttonLocations(): array;
+    abstract public function buttonLocations();
 
     protected function initializeHasButtons()
     {
@@ -38,7 +38,7 @@ trait HasButtons
     {
         $button = new Button($text, $url, $id);
         $this->buttons[$location][$text] = $button;
-        $button->bootstrapStyle('default');
+        $button->bootstrapStyle('_default');
         return $button;
     }
 

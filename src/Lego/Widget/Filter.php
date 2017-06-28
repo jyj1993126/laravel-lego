@@ -19,7 +19,7 @@ class Filter extends Widget
      */
     public function render()
     {
-        return view(config('lego.widgets.filter.default-view'), ['filter' => $this]);
+        return view(config('lego.widgets.filter._default-view'), ['filter' => $this]);
     }
 
     protected function getFieldElementNamePrefix()

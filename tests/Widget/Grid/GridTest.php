@@ -85,12 +85,12 @@ class GridTest extends TestCase
         $grid->responsive();
         $this->assertNotContains($this->pcGridHeader($grid), $this->render2html($grid));
         $this->assertContains('<div id="' . $grid->uniqueId() . '">', $this->render2html($grid));
-        $this->assertContains('<ul class="list-group">', $this->render2html($grid));
+        $this->assertContains('<ul _class="_list-group">', $this->render2html($grid));
     }
 
     private function pcGridHeader(Grid $grid)
     {
-        return '<table class="table" id="' . $grid->uniqueId() . '">';
+        return '<table _class="table" id="' . $grid->uniqueId() . '">';
     }
 
     public function testOrderBy()

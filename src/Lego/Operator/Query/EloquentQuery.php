@@ -15,7 +15,7 @@ class EloquentQuery extends Query
     public static function attempt($data)
     {
         switch (true) {
-            // eg: School::class
+            // eg: School::_class
             case is_string($data) && is_subclass_of($data, Model::class):
                 /** @var Model $model */
                 $model = new $data;
@@ -68,7 +68,7 @@ class EloquentQuery extends Query
      * @param bool $equals 是否包含等于的情况, 默认不包含
      * @return static
      */
-    public function whereGt($attribute, $value, bool $equals = false)
+    public function whereGt($attribute, $value, $equals = false)
     {
         $this->data->where($attribute, $equals ? '>=' : '>', $value);
 
@@ -82,7 +82,7 @@ class EloquentQuery extends Query
      * @param bool $equals 是否包含等于的情况, 默认不包含
      * @return static
      */
-    public function whereLt($attribute, $value, bool $equals = false)
+    public function whereLt($attribute, $value, $equals = false)
     {
         $this->data->where($attribute, $equals ? '<=' : '<', $value);
 
@@ -95,7 +95,7 @@ class EloquentQuery extends Query
      * @param string $value
      * @return static
      */
-    public function whereContains($attribute, string $value)
+    public function whereContains($attribute, $value)
     {
         if (is_empty_string($value)) {
             return $this;
@@ -112,7 +112,7 @@ class EloquentQuery extends Query
      * @param string|null $value
      * @return static
      */
-    public function whereStartsWith($attribute, string $value)
+    public function whereStartsWith($attribute, $value)
     {
         if (is_empty_string($value)) {
             return $this;
@@ -129,7 +129,7 @@ class EloquentQuery extends Query
      * @param string|null $value
      * @return static
      */
-    public function whereEndsWith($attribute, string $value)
+    public function whereEndsWith($attribute, $value)
     {
         if (is_empty_string($value)) {
             return $this;
@@ -231,7 +231,7 @@ class EloquentQuery extends Query
      * @param bool $desc 默认升序(false), 如需降序, 传入 true
      * @return static
      */
-    public function orderBy($attribute, bool $desc = false)
+    public function orderBy($attribute, $desc = false)
     {
         $this->data->orderBy($attribute, $desc ? 'desc' : 'asc');
 

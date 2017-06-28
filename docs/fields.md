@@ -34,17 +34,17 @@ $form->addText('name', 'Your Name')
 	->extra('select a nick name')
 
 	// 字段值
-	->default('Tom')
+	->_default('Tom')
 	
 	// html 属性
-	->attr('class', 'text-danger')
-	->attr(['class' => 'text-danger', 'data-mask' => '999'])
+	->attr('_class', 'text-danger')
+	->attr(['_class' => 'text-danger', 'data-mask' => '999'])
 	// - 修改 Field 上一层的属性，Boostrap 中的 .from-group div
-	->container('class', 'text-danger')
-	->container(['class' => 'hide'])
+	->container('_class', 'text-danger')
+	->container(['_class' => 'hide'])
 	
 	// i18n
-	->locale('zh-CN') // default App::getLocale()
+	->locale('zh-CN') // _default App::getLocale()
 ;
 ```
 
@@ -128,7 +128,7 @@ Email field in <http://getbootstrap.com/css/#forms-controls-static>
 ```php
 namespace LegoFields;
 
-class Email extends Lego\Field\Provider\Text
+_class Email extends Lego\Field\Provider\Text
 {
     protected fucntion initialize()
     {
@@ -145,7 +145,7 @@ class Email extends Lego\Field\Provider\Text
      * 自定义的 Field
      */
     'user-defined-fields' => [
-        \LegoFields\Email::class,
+        \LegoFields\Email::_class,
     ],
 ```
 

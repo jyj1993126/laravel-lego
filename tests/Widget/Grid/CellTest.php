@@ -28,8 +28,8 @@ class CellTest extends \Lego\Tests\TestCase
 
     public function testDefault()
     {
-        $cell = (new Cell('name', 'Name'))->default('default')->fill([]);
-        $this->assertEquals('default', $cell->value());
+        $cell = (new Cell('name', 'Name'))->_default('_default')->fill([]);
+        $this->assertEquals('_default', $cell->value());
     }
 
 }

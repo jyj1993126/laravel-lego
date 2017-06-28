@@ -22,12 +22,12 @@ trait MessageOperator
         $this->errors = new MessageBag();
     }
 
-    public function messages() : MessageBag
+    public function messages()
     {
         return $this->messages;
     }
 
-    public function errors() : MessageBag
+    public function errors()
     {
         return $this->errors;
     }

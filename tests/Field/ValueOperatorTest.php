@@ -20,8 +20,8 @@ class ValueOperatorTest extends TestCase
         $field->setOriginalValue('original');
         $this->assertEquals($field->takeDefaultInputValue(), 'original');
 
-        $field->default('default');
-        $this->assertEquals($field->takeDefaultInputValue(), 'default');
+        $field->_default('_default');
+        $this->assertEquals($field->takeDefaultInputValue(), '_default');
 
         $field->setNewValue('new');
         $this->assertEquals($field->takeDefaultInputValue(), 'new');
@@ -34,8 +34,8 @@ class ValueOperatorTest extends TestCase
         $field->setOriginalValue('original');
         $this->assertEquals($field->takeDefaultShowValue(), 'original');
 
-        $field->default('default');
-        $this->assertEquals($field->takeDefaultShowValue(), 'default');
+        $field->_default('_default');
+        $this->assertEquals($field->takeDefaultShowValue(), '_default');
 
         $field->setDisplayValue('display');
         $this->assertEquals($field->takeDefaultShowValue(), 'display');

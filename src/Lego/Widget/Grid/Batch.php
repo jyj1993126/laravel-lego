@@ -142,7 +142,7 @@ class Batch
                 ? call_user_func($this->message, $this->getDataCollection())
                 : $this->message;
             return Lego::confirm($message, function ($sure) {
-                return $sure ? $this->callHandleClosure() : redirect($this->exit());
+                return $sure ? $this->callHandleClosure() : redirect($this->_exit());
             });
         }
 
@@ -181,13 +181,13 @@ class Batch
                 $params[0] = $store->getOriginalData();
                 call_user_func_array($this->each, $params);
             });
-            return redirect($this->exit());
+            return redirect($this->_exit());
         } elseif ($this->handle) {
             $collection = $collection->map(function (Store $store) {
                 return $store->getOriginalData();
             });
             $response = call_user_func($this->handle, $collection, ...$params);
-            return $response ?: redirect($this->exit());
+            return $response ?: redirect($this->_exit());
         } else {
             throw new LegoException(__CLASS__ . ' does not set `handle` or `each`.');
         }
@@ -207,7 +207,7 @@ class Batch
         return is_array($ids) ? $ids : [];
     }
 
-    private function exit()
+    private function _exit()
     {
         return Request::fullUrlWithQuery(
             array_merge(Request::query(), [

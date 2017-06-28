@@ -15,7 +15,7 @@ class FieldLoader
         $this->addBuildInFields();
         UserDefinedField::registerFromConfiguration();
 
-        foreach (UserDefinedField::list() as $name => $field) {
+        foreach (UserDefinedField::_list() as $name => $field) {
             $this->fields[$name] = $field;
         }
     }

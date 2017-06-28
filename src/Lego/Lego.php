@@ -32,7 +32,7 @@ class Lego
         return (new Confirm($message, $action, $delay))->response();
     }
 
-    public static function message($message, $level = 'default')
+    public static function message($message, $level = '_default')
     {
         return view('lego::message', compact('message', 'level'));
     }

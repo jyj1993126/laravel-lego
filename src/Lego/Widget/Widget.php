@@ -62,7 +62,7 @@ abstract class Widget implements ButtonLocations
      *
      * @return array
      */
-    public function buttonLocations(): array
+    public function buttonLocations()
     {
         return [
             self::BTN_RIGHT_TOP,

@@ -52,7 +52,7 @@ abstract class Field implements HasMode
      * @param string $description 描述、标签
      * @param mixed $data 数据域
      */
-    public function __construct(string $name, string $description = null, $data = [])
+    public function __construct( $name, $description = null, $data = [])
     {
         $this->name = $name;
 
@@ -61,7 +61,7 @@ abstract class Field implements HasMode
          *  - name : school.city.name
          *  - column : name
          *  - relation : school.city
-         *  - description <default> : School City Name
+         *  - description <_default> : School City Name
          */
         $this->column = last(explode('.', $name));
         $this->description = $description;

@@ -31,7 +31,7 @@ class Confirm
     private $confirmQueryName;
     private $fromQueryName;
 
-    public function __construct($message, callable $action, int $delay = null)
+    public function __construct($message, callable $action,$delay = null)
     {
         $this->message = $message;
         $this->action = $action;
@@ -49,7 +49,7 @@ class Confirm
     {
         $previous = URL::previous();
         parse_str(last(explode('?', $previous)), $params);
-        $from = Request::query($this->fromQueryName) ?: ($params[$this->fromQueryName] ?? $previous);
+        $from = Request::query( $this->fromQueryName ) ?: ($params[$this->fromQueryName] ?: ($previous ?: null));
 
         if ($confirmValue = Request::query($this->confirmQueryName)) {
             $confirmed = $confirmValue === $this->expectedConfirmValue;

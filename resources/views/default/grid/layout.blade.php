@@ -12,7 +12,7 @@ $hasBatch = $grid->batchModeEnabled();
     @show
 @endif
 
-@include('lego::default.snippets.top-buttons', ['widget' => $grid])
+@include('lego::_default.snippets.top-buttons', ['widget' => $grid])
 
 <div id="{{ $grid->uniqueId() }}-container">
     @if($hasBatch)
@@ -71,4 +71,4 @@ $hasBatch = $grid->batchModeEnabled();
     @endpush
 @endif
 
-@include('lego::default.snippets.bottom-buttons', ['widget' => $grid])
+@include('lego::_default.snippets.bottom-buttons', ['widget' => $grid])

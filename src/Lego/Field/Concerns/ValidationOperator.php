@@ -15,7 +15,7 @@ trait ValidationOperator
     private $rules = [];
     private $discardedRules = [];
 
-    public function rules(): array
+    public function rules()
     {
         return $this->rules;
     }

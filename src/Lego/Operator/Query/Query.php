@@ -43,7 +43,7 @@ abstract class Query extends Operator implements \ArrayAccess, Arrayable, \Count
      * @param bool $equals 是否包含等于的情况, 默认不包含
      * @return static
      */
-    abstract public function whereGt($attribute, $value, bool $equals = false);
+    abstract public function whereGt($attribute, $value, $equals = false);
 
     public function whereGte($attribute, $value)
     {
@@ -57,7 +57,7 @@ abstract class Query extends Operator implements \ArrayAccess, Arrayable, \Count
      * @param bool $equals 是否包含等于的情况, 默认不包含
      * @return static
      */
-    abstract public function whereLt($attribute, $value, bool $equals = false);
+    abstract public function whereLt($attribute, $value, $equals = false);
 
     public function whereLte($attribute, $value)
     {
@@ -70,7 +70,7 @@ abstract class Query extends Operator implements \ArrayAccess, Arrayable, \Count
      * @param string|null $value
      * @return static
      */
-    abstract public function whereContains($attribute, string $value);
+    abstract public function whereContains($attribute, $value);
 
     /**
      * 当前属性以特定字符串开头
@@ -78,7 +78,7 @@ abstract class Query extends Operator implements \ArrayAccess, Arrayable, \Count
      * @param string|null $value
      * @return static
      */
-    abstract public function whereStartsWith($attribute, string $value);
+    abstract public function whereStartsWith($attribute, $value);
 
     /**
      * 当前属性以特定字符串结尾
@@ -86,7 +86,7 @@ abstract class Query extends Operator implements \ArrayAccess, Arrayable, \Count
      * @param string|null $value
      * @return static
      */
-    abstract public function whereEndsWith($attribute, string $value);
+    abstract public function whereEndsWith($attribute, $value);
 
     /**
      * between, 两端开区间
@@ -138,7 +138,7 @@ abstract class Query extends Operator implements \ArrayAccess, Arrayable, \Count
      * @param bool $desc 默认升序(false), 如需降序, 传入 true
      * @return static
      */
-    abstract public function orderBy($attribute, bool $desc = false);
+    abstract public function orderBy($attribute, $desc = false);
 
     /**
      * Create Paginator

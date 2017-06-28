@@ -43,7 +43,7 @@ class Cell
         return $this->description;
     }
 
-    public function default($value)
+    public function _default( $value)
     {
         $this->default = $value;
         return $this;
@@ -77,7 +77,7 @@ class Cell
         return clone $this;
     }
 
-    public function fill($data): self
+    public function fill($data)
     {
         if ($data instanceof Store) {
             $this->data = $data->getOriginalData();

@@ -8,7 +8,7 @@ _Code: `Lego/LegoRegister.php`_
 在 `Lego/Register` 中创建对应数据类，示例如下：
 
 ```php
-class FieldData extends Data
+_class FieldData extends Data
 {
     /**
      * 校验注册的数据是否合法, 不合法时抛出异常
@@ -35,10 +35,10 @@ class FieldData extends Data
 
 ```php
 
-lego_register(FieldData::class, [
+lego_register(FieldData::_class, [
 	'address' => ['description' => '地址'],
 	// ..
-], Room::class);
+], Room::_class);
 ```
 
 
@@ -46,5 +46,5 @@ lego_register(FieldData::class, [
 
 ```php
 
-$data = Register::get(FieldData::class, Room::class);
+$data = Register::get(FieldData::_class, Room::_class);
 ```

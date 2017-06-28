@@ -32,10 +32,10 @@ $grid->remove('paid_at', 'created_at');
 $grid->remove(['paid_at', 'created_at']);
 ```
 
-### set default value
+### set _default value
 
 ```php
-$grid->add('column', 'Description')->default('default value');
+$grid->add('column', 'Description')->_default('_default value');
 ```
 
 ### add button
@@ -46,7 +46,7 @@ $grid->addLeftTopButton('new', route('...'));
 
 ## Responsive view
 
-Responsive view is enabled by default, you can disabled it in config file `lego.php`,  
+Responsive view is enabled by _default, you can disabled it in config file `lego.php`,
 In addition , you can call `responsive()` method to enable it for current instance.
 
 - Disable Responsive view Globally
@@ -74,7 +74,7 @@ $grid->add('name|trim|strip', 'Name');
 ```
 
 ```php
-$grid = Lego::grid(City::class);
+$grid = Lego::grid(City::_class);
 
 $grid->add('name|trim', 'Name')
 
@@ -136,7 +136,7 @@ $grid->add('name|trim', 'Name')
 
 ```php
 lego_register(
-    GridCellPipe::class,
+    GridCellPipe::_class,
     function ($name, Model $model, Cell $cell) {
         return $model->getAttribute($cell->name() . '_en')
     }, 
@@ -159,7 +159,7 @@ $grid->export('filename');
 > **Notice：** Lego 导出功能依赖 [Laravel-Excel](https://github.com/Maatwebsite/Laravel-Excel)，所以需要将下面类注册到 `config/app.php` 的 `providers` 中：
 > 
 > ```php
-> Maatwebsite\Excel\ExcelServiceProvider::class
+> Maatwebsite\Excel\ExcelServiceProvider::_class
 > ```
 
 ### Exporting callback

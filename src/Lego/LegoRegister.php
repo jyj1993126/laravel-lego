@@ -10,7 +10,7 @@ use Lego\Register\Data;
  */
 class LegoRegister
 {
-    const DEFAULT_TAG = 'default';
+    const DEFAULT_TAG = '_default';
 
     private static $registered = []; // register data
 

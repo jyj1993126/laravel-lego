@@ -7,7 +7,7 @@ use Lego\Utility\HtmlUtility;
  */
 trait FieldContainer
 {
-    protected $fieldContainerAttributes = ['class' => 'lego-field-container form-group'];
+    protected $fieldContainerAttributes = ['_class' => 'lego-field-container form-group'];
 
     public function container($attributeOrAttributes, $value = null)
     {

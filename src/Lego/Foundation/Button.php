@@ -81,21 +81,21 @@ class Button
         return $this;
     }
 
-    public function class($class)
+    public function _class( $class)
     {
-        return $this->attribute('class', is_array($class) ? $class : explode(' ', trim($class)));
+        return $this->attribute('_class', is_array($class) ? $class : explode(' ', trim($class)));
     }
 
     public function removeClass($class)
     {
-        $all = array_get($this->attributes, 'class', []);
+        $all = array_get($this->attributes, '_class', []);
         if (!$all) {
             return;
         }
 
         $idx = array_search($class, $all);
         if ($idx !== false) {
-            unset($this->attributes['class'][$idx]);
+            unset($this->attributes['_class'][$idx]);
         }
     }
 
@@ -114,12 +114,12 @@ class Button
 
     public function bootstrapStyle($style)
     {
-        $styles = ['default', 'primary', 'info', 'warning', 'danger'];
+        $styles = ['_default', 'primary', 'info', 'warning', 'danger'];
         foreach ($styles as $sty) {
             $this->removeClass('btn-' . $sty);
         }
 
-        return $this->class(['btn', 'btn-' . $style]);
+        return $this->_class(['btn', 'btn-' . $style]);
     }
 
     /**
@@ -133,7 +133,7 @@ class Button
             $this->removeClass('btn-' . $style);
         }
 
-        return is_null($size) ? $this : $this->class('btn-' . $size);
+        return is_null($size) ? $this : $this->_class('btn-' . $size);
     }
 
     function __toString()

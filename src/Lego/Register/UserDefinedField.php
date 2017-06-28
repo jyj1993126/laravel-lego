@@ -25,11 +25,11 @@ class UserDefinedField extends Data
     }
 
     /**
-     * list user defined fields
+     * _list user defined fields
      *
      * @return array
      */
-    public static function list()
+    public static function _list()
     {
         $fields = LegoRegister::getAll(self::class, []);
         unset($fields[LegoRegister::DEFAULT_TAG]);

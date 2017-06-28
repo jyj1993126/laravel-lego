@@ -39,7 +39,7 @@ class AutoComplete extends Field
      */
     private $limit = 20;
 
-    public function limit(int $limit)
+    public function limit($limit)
     {
         $this->limit = $limit;
 
@@ -56,7 +56,7 @@ class AutoComplete extends Field
      */
     private $min;
 
-    public function min(int $length)
+    public function min($length)
     {
         $this->min = $length;
 
@@ -153,7 +153,7 @@ class AutoComplete extends Field
 
     protected function renderEditable()
     {
-        return $this->view('lego::default.field.auto-complete');
+        return $this->view('lego::_default.field.auto-complete');
     }
 
     /**

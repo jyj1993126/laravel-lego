@@ -53,7 +53,7 @@ class Grid extends Widget
         return $this->filter;
     }
 
-    public function orderBy($column, bool $desc = false)
+    public function orderBy($column, $desc = false)
     {
         $this->query->orderBy($column, $desc);
 
@@ -143,7 +143,7 @@ class Grid extends Widget
     private $paginatorPerPage = 100;
     private $paginatorPageName;
 
-    public function paginate(int $perPage, $pageName = null)
+    public function paginate($perPage, $pageName = null)
     {
         $this->paginatorPerPage = $perPage;
         $this->paginatorPageName = $pageName;
@@ -189,8 +189,8 @@ class Grid extends Widget
     public function render()
     {
         $view = $this->responsive && app(\Mobile_Detect::class)->isMobile()
-            ? view('lego::default.grid.list-group')
-            : view('lego::default.grid.table');
+            ? view('lego::_default.grid._list-group')
+            : view('lego::_default.grid.table');
         return $view->with('grid', $this)->render();
     }
 

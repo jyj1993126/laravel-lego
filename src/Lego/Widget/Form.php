@@ -131,7 +131,7 @@ class Form extends Widget implements HasMode
                 return;
             }
 
-            // Save to store <default>
+            // Save to store <_default>
             if ($this->saveFieldsValueToStore()) {
                 $this->returnSuccessResponse();
                 $this->messages()->add('success', '操作成功');
@@ -203,6 +203,6 @@ class Form extends Widget implements HasMode
      */
     public function render()
     {
-        return view(config('lego.widgets.form.default-view'), ['form' => $this])->render();
+        return view(config('lego.widgets.form._default-view'), ['form' => $this])->render();
     }
 }

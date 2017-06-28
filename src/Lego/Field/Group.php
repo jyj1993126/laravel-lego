@@ -11,7 +11,7 @@ class Group
 
     protected $name; // Group Name
 
-    protected $fieldNames = []; // field name list belongs to group
+    protected $fieldNames = []; // field name _list belongs to group
 
     function __construct(Fields $fields, $name)
     {
@@ -83,6 +83,6 @@ class Group
 
     function __toString()
     {
-        return view('lego::default.group', ['group' => $this])->render();
+        return view('lego::_default.group', ['group' => $this])->render();
     }
 }

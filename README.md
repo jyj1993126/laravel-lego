@@ -69,9 +69,9 @@ Add these lines to `providres` array of config file `config/app.php`.
 
 ```php
 // Lego require LaravelCollective/html ，So need to add it's ServiceProvider.
-Collective\Html\HtmlServiceProvider::class,
+Collective\Html\HtmlServiceProvider::_class,
 
-Lego\LegoServiceProvider::class,
+Lego\LegoServiceProvider::_class,
 ```
 
 ### 3、Install Lego and Publish assets

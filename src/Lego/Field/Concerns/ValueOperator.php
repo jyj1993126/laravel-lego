@@ -58,7 +58,7 @@ trait ValueOperator
         return $this;
     }
 
-    public function default($value)
+    public function _default( $value)
     {
         $this->defaultValue = $value;
 

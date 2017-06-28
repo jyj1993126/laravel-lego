@@ -86,7 +86,7 @@ trait HasGroups
         }
     }
 
-    public function getGroup($name): Group
+    public function getGroup($name)
     {
         if (isset($this->groups[$name])) {
             $group = $this->groups[$name];

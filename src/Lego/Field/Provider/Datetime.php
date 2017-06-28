@@ -134,6 +134,6 @@ class Datetime extends Field
 
     protected function renderEditable()
     {
-        return $this->view('lego::default.field.date');
+        return $this->view('lego::_default.field.date');
     }
 }

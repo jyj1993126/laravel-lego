@@ -69,7 +69,7 @@ class ArrayQuery extends Query
      * @param bool $equals 是否包含等于的情况, 默认不包含
      * @return static
      */
-    public function whereGt($attribute, $value, bool $equals = false)
+    public function whereGt($attribute, $value, $equals = false)
     {
         return $this->addFilter(
             function (Store $store) use ($attribute, $value, $equals) {
@@ -86,7 +86,7 @@ class ArrayQuery extends Query
      * @param bool $equals 是否包含等于的情况, 默认不包含
      * @return static
      */
-    public function whereLt($attribute, $value, bool $equals = false)
+    public function whereLt($attribute, $value, $equals = false)
     {
         return $this->addFilter(
             function (Store $store) use ($attribute, $value, $equals) {
@@ -102,7 +102,7 @@ class ArrayQuery extends Query
      * @param string|null $value
      * @return static
      */
-    public function whereContains($attribute, string $value)
+    public function whereContains($attribute, $value)
     {
         return $this->addFilter(function (Store $store) use ($attribute, $value) {
             return str_contains($store->get($attribute), $value);
@@ -115,7 +115,7 @@ class ArrayQuery extends Query
      * @param string|null $value
      * @return static
      */
-    public function whereStartsWith($attribute, string $value)
+    public function whereStartsWith($attribute, $value)
     {
         return $this->addFilter(function (Store $store) use ($attribute, $value) {
             return starts_with($store->get($attribute), $value);
@@ -128,7 +128,7 @@ class ArrayQuery extends Query
      * @param string|null $value
      * @return static
      */
-    public function whereEndsWith($attribute, string $value)
+    public function whereEndsWith($attribute, $value)
     {
         return $this->addFilter(function (Store $store) use ($attribute, $value) {
             return ends_with($store->get($attribute), $value);
@@ -223,7 +223,7 @@ class ArrayQuery extends Query
      * @param bool $desc 默认升序(false), 如需降序, 传入 true
      * @return static
      */
-    public function orderBy($attribute, bool $desc = false)
+    public function orderBy($attribute, $desc = false)
     {
         $this->collection = $this->collection->sortBy($attribute, SORT_REGULAR, $desc);
 

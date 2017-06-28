@@ -21,7 +21,7 @@ class GenerateIDEHelper extends Command
     {
         $path = base_path('_ide_helper_lego.php');
         UserDefinedField::registerFromConfiguration();
-        $fields = UserDefinedField::list();
+        $fields = UserDefinedField::_list();
         if (!$fields) {
             $this->line('Does not exists user defined fields');
             if (is_file($path)) {
