@@ -1,4 +1,4 @@
-@extends('lego::_default.grid.layout')
+@extends('lego::default.grid.layout')
 
 @section('grid-body')
     <div class="table-responsive">
@@ -16,7 +16,7 @@
                 <tr>
                     @if($grid->batchModeEnabled())
                         <td>
-                            @include('lego::_default.grid.batch-checkbox', ['batchId' => $row->getKey()])
+                            @include('lego::default.grid.batch-checkbox', ['batchId' => $row->getKey()])
                         </td>
                     @endif
                     @foreach($grid->cells() as $cell)

@@ -12,4 +12,4 @@
         <a href="?" class="btn btn-default">清空</a>
     </div>
 </form>
-@include('lego::_default.snippets.bottom-buttons', ['widget' => $filter])
+@include('lego::default.snippets.bottom-buttons', ['widget' => $filter])

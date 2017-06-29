@@ -153,7 +153,7 @@ class AutoComplete extends Field
 
     protected function renderEditable()
     {
-        return $this->view('lego::_default.field.auto-complete');
+        return $this->view('lego::default.field.auto-complete');
     }
 
     /**

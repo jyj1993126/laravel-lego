@@ -83,6 +83,6 @@ class Group
 
     function __toString()
     {
-        return view('lego::_default.group', ['group' => $this])->render();
+        return view('lego::default.group', ['group' => $this])->render();
     }
 }

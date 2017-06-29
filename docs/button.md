@@ -15,6 +15,6 @@ $form->addRightTopButton('Delete')
 	->action(function () use ($blog) {
 		$blog->delete();
 		flash('Blog removed.')
-		return redirect('/blog-_list');
+		return redirect('/blog-list');
 	})
 ```

@@ -26,7 +26,7 @@ return [
          * 字段的默认属性, 特殊用途字段(例如 自动补全)除外
          */
         'attributes' => [
-            '_class' => 'form-control',
+            'class' => 'form-control',
         ],
     ],
 
@@ -55,13 +55,13 @@ return [
             /**
              * 表单的默认 view
              */
-            '_default-view' => 'lego::_default.form.horizontal',
+            'default-view' => 'lego::default.form.horizontal',
         ],
         /**
          * filter's configuration
          */
         'filter' => [
-            '_default-view' => 'lego::_default.filter.inline',
+            'default-view' => 'lego::default.filter.inline',
         ],
         /**
          * grid's configuration

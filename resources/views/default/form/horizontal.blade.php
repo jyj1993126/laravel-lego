@@ -1,11 +1,11 @@
 <?php /** @var \Lego\Widget\Form $form */ ?>
 
-@include('lego::_default.snippets.top-buttons', ['widget' => $form])
+@include('lego::default.snippets.top-buttons', ['widget' => $form])
 
-@include('lego::_default.messages', ['object' => $form])
+@include('lego::default.messages', ['object' => $form])
 <form id="{{ $form->elementId() }}" method="post" class="form-horizontal" action="{{ $form->getAction() }}">
     @foreach($form->fields() as $field)
-        @include('lego::_default.form.horizontal-form-group', ['field' => $field])
+        @include('lego::default.form.horizontal-form-group', ['field' => $field])
     @endforeach
 
     @if($form->isEditable())
@@ -19,8 +19,8 @@
     @endif
 </form>
 
-@include('lego::_default.snippets.bottom-buttons', ['widget' => $form])
+@include('lego::default.snippets.bottom-buttons', ['widget' => $form])
 
 @push('lego-scripts')
-    @include('lego::_default.form.condition-group', ['form' => $form])
+    @include('lego::default.form.condition-group', ['form' => $form])
 @endpush

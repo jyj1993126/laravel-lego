@@ -38,7 +38,7 @@ trait HasButtons
     {
         $button = new Button($text, $url, $id);
         $this->buttons[$location][$text] = $button;
-        $button->bootstrapStyle('_default');
+        $button->bootstrapStyle('default');
         return $button;
     }
 

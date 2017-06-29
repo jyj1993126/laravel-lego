@@ -104,6 +104,6 @@ abstract class RangeField extends Field
 
     public function renderEditable()
     {
-        return $this->view('lego::_default.field.range');
+        return $this->view('lego::default.field.range');
     }
 }

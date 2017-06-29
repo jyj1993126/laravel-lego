@@ -83,19 +83,19 @@ class Button
 
     public function _class( $class)
     {
-        return $this->attribute('_class', is_array($class) ? $class : explode(' ', trim($class)));
+        return $this->attribute('class', is_array($class) ? $class : explode(' ', trim($class)));
     }
 
     public function removeClass($class)
     {
-        $all = array_get($this->attributes, '_class', []);
+        $all = array_get($this->attributes, 'class', []);
         if (!$all) {
             return;
         }
 
         $idx = array_search($class, $all);
         if ($idx !== false) {
-            unset($this->attributes['_class'][$idx]);
+            unset($this->attributes['class'][$idx]);
         }
     }
 
@@ -114,7 +114,7 @@ class Button
 
     public function bootstrapStyle($style)
     {
-        $styles = ['_default', 'primary', 'info', 'warning', 'danger'];
+        $styles = ['default', 'primary', 'info', 'warning', 'danger'];
         foreach ($styles as $sty) {
             $this->removeClass('btn-' . $sty);
         }

@@ -203,6 +203,6 @@ class Form extends Widget implements HasMode
      */
     public function render()
     {
-        return view(config('lego.widgets.form._default-view'), ['form' => $this])->render();
+        return view(config('lego.widgets.form.default-view'), ['form' => $this])->render();
     }
 }

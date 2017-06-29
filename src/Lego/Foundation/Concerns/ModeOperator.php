@@ -98,7 +98,7 @@ trait ModeOperator
     {
         return HtmlFacade::tag('p', (string)$this->takeDefaultShowValue(), [
             'id' => $this->elementId(),
-            '_class' => 'form-control-static',
+            'class' => 'form-control-static',
         ]);
     }
 

@@ -72,6 +72,6 @@ class CascadeSelect extends Select
         LegoAssets::js('components/vue-resource/dist/vue-resource.min.js');
         LegoAssets::js('field/cascade-select.js');
 
-        return view('lego::_default.field.cascade-select', ['field' => $this]);
+        return view('lego::default.field.cascade-select', ['field' => $this]);
     }
 }

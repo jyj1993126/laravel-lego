@@ -1,4 +1,4 @@
-@extends('lego::_default.grid.layout')
+@extends('lego::default.grid.layout')
 
 @section('grid-body')
     <div id="{{ $grid->uniqueId() }}">
@@ -11,7 +11,7 @@
                 >
                     @if($grid->batchModeEnabled())
                         <span class="pull-right">
-                        @include('lego::_default.grid.batch-checkbox', ['batchId' => $row->getKey()])
+                        @include('lego::default.grid.batch-checkbox', ['batchId' => $row->getKey()])
                         </span>
                     @endif
 
