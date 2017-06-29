@@ -28,7 +28,7 @@ trait HasFields
         foreach (LegoFields::all() as $name => $class) {
             self::macro('add' . $name, function () use ($class) {
                 $args = func_get_args();
-                return $this->addFieldByClassName($class, $args[0], $args[1] ?: null);
+                return $this->addFieldByClassName($class, $args[0], @$args[1] ?: null);
             });
         }
     }
