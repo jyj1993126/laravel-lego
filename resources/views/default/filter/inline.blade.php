@@ -1,4 +1,4 @@
-@include('lego::_default.snippets.top-buttons', ['widget' => $filter])
+@include('lego::default.snippets.top-buttons', ['widget' => $filter])
 <form method="get" class="form-inline" style="line-height: 40px;">
     @foreach($filter->fields() as $field)
         <div class="form-group">

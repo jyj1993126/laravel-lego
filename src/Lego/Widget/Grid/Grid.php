@@ -189,7 +189,7 @@ class Grid extends Widget
     public function render()
     {
         $view = $this->responsive && app(\Mobile_Detect::class)->isMobile()
-            ? view('lego::default.grid._list-group')
+            ? view('lego::default.grid.list-group')
             : view('lego::default.grid.table');
         return $view->with('grid', $this)->render();
     }
